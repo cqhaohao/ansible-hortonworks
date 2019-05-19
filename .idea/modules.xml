@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ansible-hortonworks.iml" filepath="$PROJECT_DIR$/ansible-hortonworks.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ansible-hortonworks.iml" filepath="$PROJECT_DIR$/.idea/ansible-hortonworks.iml" />
     </modules>
   </component>
 </project>

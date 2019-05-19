@@ -6,8 +6,10 @@
 ##
 ######################################################
 
-[hdp-master]
+[hdp-masternode-01]
 hadoop1 ansible_host=192.168.10.21 ansible_user=root ansible_ssh_private_key_file="~/.ssh/id_rsa" rack=/vhost12-rack
+
+[hdp-masternode-02]
 hadoop2 ansible_host=192.168.10.22 ansible_user=root ansible_ssh_private_key_file="~/.ssh/id_rsa" rack=/vhost10-rack
 
 [hdp-slave]
@@ -17,3 +19,6 @@ hadoop5 ansible_host=192.168.10.25 ansible_user=root ansible_ssh_private_key_fil
 
 [hdp-edge]
 hadoop6 ansible_host=192.168.10.26 ansible_user=root ansible_ssh_private_key_file="~/.ssh/id_rsa" rack=/vhost10-rack
+
+[repo]
+hadoop1 ansible_host=192.168.10.21
