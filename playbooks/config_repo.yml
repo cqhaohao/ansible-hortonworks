@@ -27,13 +27,13 @@
 
     - name: print install_hdf
       debug:
-        msg: "{{ hostvars[groups['repo']|sort|list|first].install_hdf }}"
+        msg: "{{ install_hdf }}"
 
     - name: Deploy HDF Repo Files
       template:
          src: ./roles/offline_repo/templates/hdf.repo
          dest: "/etc/yum.repos.d/hdf.repo"
-      when: hostvars[groups['repo']|sort|list|first].install_hdf is defined and hostvars[groups['repo']|sort|list|first].install_hdf
+      when: install_hdf is defined and install_hdf
 
     - block:
         - name: Deploy HDP Repo Files
@@ -45,4 +45,4 @@
           template:
              src: ./roles/offline_repo/templates/hdp.gpl.repo
              dest: "/etc/yum.repos.d/hdp.gpl.repo"
-      when: hostvars[groups['repo']|sort|list|first].install_hdp is defined and hostvars[groups['repo']|sort|list|first].install_hdp
+      when: install_hdp is defined and install_hdp
