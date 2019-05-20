@@ -26,8 +26,8 @@ repo_base_url: 'http://hadoop1'     # change this if using a Local Repository
 ###########################
 
 external_dns: yes                                         # set to yes to use the existing DNS (when no, it will update the /etc/hosts file - must be set to 'no' when using Azure)
-disable_firewall: no                                      # set to yes to disable the existing local firewall service (iptables, firewalld, ufw)
-timezone: UTC
+disable_firewall: yes                                      # set to yes to disable the existing local firewall service (iptables, firewalld, ufw)
+timezone: Asia/Shanghai                                              #Asia/Shanghai,UTC
 
 
 ########################
