@@ -9,5 +9,5 @@ main_os_target: "operating_systems/{{ baseurl_os_family }}"
 
 gpl_repo_url: "{{ repo_base_url }}/HDP-GPL/{{ repo_os_family }}/{{ hdp_version }}-{{ hdp_build_number_repo }}"
 
-utils_repo_url: "{{ repo_base_url }}/HDP-UTILS-{{ utils_version }}/repos/{{ repo_os_family }}"
+utils_repo_url: "{{ repo_base_url }}/HDP-UTILS/{{ repo_os_family }}/{{ utils_version }}"
 utils_os_target: "operating_systems/{{ baseurl_os_family }}/repositories/HDP-UTILS-{{ utils_version }}"
