@@ -1,11 +1,11 @@
 ---
 
-- name: Deploy HTTPD REPO
-  hosts: ambari-server
-  any_errors_fatal: true
-  become: yes
-  roles:
-    - offline_repo
+#- name: Deploy HTTPD REPO
+#  hosts: ambari-server
+#  any_errors_fatal: true
+#  become: yes
+#  roles:
+#    - offline_repo
 
 - hosts: hadoop-cluster
   any_errors_fatal: true
