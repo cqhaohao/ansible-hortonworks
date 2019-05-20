@@ -217,6 +217,7 @@ blueprint_dynamic:                                              # properties for
       - METRICS_GRAFANA
       - INFRA_SOLR
       - APP_TIMELINE_SERVER
+      - TIMELINE_READER
       - HISTORYSERVER
       - SPARK2_JOBHISTORYSERVER
   - host_group: "hdp-edge"
