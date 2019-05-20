@@ -218,6 +218,7 @@ blueprint_dynamic:                                              # properties for
       - INFRA_SOLR
       - APP_TIMELINE_SERVER
       - TIMELINE_READER
+      - YARN_REGISTRY_DNS
       - HISTORYSERVER
       - SPARK2_JOBHISTORYSERVER
   - host_group: "hdp-edge"
