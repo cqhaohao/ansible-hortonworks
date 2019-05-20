@@ -1,7 +1,7 @@
 [AMBARI-{{ ambari_version }}]
 name=AMBARI Version - AMBARI-{{ ambari_version}}
-baseurl=http://{{ repo_base_url }}/ambari/centos{{ ansible_distribution_major_version }}/{{ ambari_version }}
+baseurl={{ repo_base_url }}/ambari/centos{{ ansible_distribution_major_version }}/{{ ambari_version }}
 gpgcheck=1
-gpgkey=http://{{ repo_base_url }}/ambari/centos{{ ansible_distribution_major_version }}/{{ ambari_version }}/RPM-GPG-KEY/RPM-GPG-KEY-Jenkins
+gpgkey={{ repo_base_url }}/ambari/centos{{ ansible_distribution_major_version }}/{{ ambari_version }}/RPM-GPG-KEY/RPM-GPG-KEY-Jenkins
 enabled=1
 priority=1
