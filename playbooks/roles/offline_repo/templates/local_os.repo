@@ -1,6 +1,6 @@
 [osrepo]
 name=os_repo
-baseurl=http://{{ groups['repo'][0] }}/iso/
+baseurl=http://{{ repo_base_url }}/iso/
 enabled=true
 gpgcheck=false
 priority=1

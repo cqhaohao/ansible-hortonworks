@@ -16,7 +16,7 @@ hdf_build_number: 'auto'                                  # the HDF build number
 hdpsearch_version: '4.0.0'                                # must be the full version number
 hdpsearch_build_number: '400'                             # the HDP Search build number from docs.hortonworks.com
 
-repo_base_url: 'http://hadoop1.lts.local'     # change this if using a Local Repository
+repo_base_url: 'http://hadoop1'     # change this if using a Local Repository
 
 
 ###########################
@@ -84,7 +84,7 @@ database_options:
 security: 'none'                                          # can be set to 'none', 'mit-kdc' or 'active-directory'
 security_options:
   external_hostname: ''                                   # if this is empty, Ansible will install and prepare the MIT KDC on the Ambari node
-  realm: 'EXAMPLE.COM'
+  realm: 'LTS.LOCAL'
   admin_principal: 'admin'                                # the Kerberos principal that has the permissions to create new users (don't append the realm)
   admin_password: "{{ default_password }}"
   kdc_master_key: "{{ default_password }}"                # only used when security is set to 'mit-kdc'

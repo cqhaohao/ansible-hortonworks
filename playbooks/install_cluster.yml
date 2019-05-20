@@ -2,7 +2,7 @@
 - import_playbook: "prepare_nodes.yml"
   tags: prepare_nodes
 
-- import_playbook: "deploy.httpd.yml"
+- import_playbook: "config_repo.yml"
   tags: repo
 
 - import_playbook: "install_ambari.yml"

@@ -35,11 +35,11 @@
     enabled: "{{ httpd_service_on | default('yes') }}"
   tags: ['httpd']
 
-- name: Create Directory for HTTP server
-  file: path="{{ item }}" state=directory
-  with_items:
-     - "/var/www/html/hdp"
-     - "/var/www/html/hdf"
+#- name: Create Directory for HTTP server
+#  file: path="{{ item }}" state=directory
+#  with_items:
+#     - "/var/www/html/hdp"
+#     - "/var/www/html/hdf"
 
 - name: Deploy Ambari Repo Files
   template:
@@ -90,7 +90,7 @@
 
     # unzip the hdp tarball
     - name: unzip the hdp tarball
-      command: tar -zxvf /root/hdp/HDP3.1.0/HDP-3.1.0.0-centos7-rpm.tar.gz -C /var/www/html/hdp/
+      command: tar -zxvf /root/hdp/HDP3.1.0/HDP-3.1.0.0-centos7-rpm.tar.gz -C /var/www/html/
 
     # download the hdp-utilits tarball
 #    - name: download the hdp utilits tarball
@@ -100,7 +100,7 @@
 
     # unzip the hdp-utilits tarball
     - name: unzip the hdp-utilits tarball
-      command: tar -zxvf /root/hdp/HDP3.1.0/HDP-UTILS-1.1.0.22-centos7.tar.gz -C /var/www/html/hdp/
+      command: tar -zxvf /root/hdp/HDP3.1.0/HDP-UTILS-1.1.0.22-centos7.tar.gz -C /var/www/html/
 
 
     # download the hdp-gpl tarball
@@ -111,7 +111,7 @@
 
     # unzip the hdp-gpl tarball
     - name: unzip the hdp-gpl tarball
-      command: tar -zxvf /root/hdp/HDP3.1.0/HDP-GPL-3.1.0.0-centos7-gpl.tar.gz -C /var/www/html/hdp/
+      command: tar -zxvf /root/hdp/HDP3.1.0/HDP-GPL-3.1.0.0-centos7-gpl.tar.gz -C /var/www/html/
   when: install_hdp is defined and install_hdp
 
 
@@ -134,7 +134,7 @@
 
     # unzip the hdf tarball
     - name: unzip the hdf tarball
-      command: tar -zxvf /var/www/html/hdf/hdf.tar.gz -C /var/www/html/hdf/
+      command: tar -zxvf /var/www/html/hdf/hdf.tar.gz -C /var/www/html/
 
     # download the hdp-utilits tarball
     - name: download the hdp utilis tarball
@@ -144,5 +144,5 @@
 
     # unzip the hdp-utilits tarball
     - name: unzip the hdp-utilits tarball
-      command: tar -zxvf /var/www/html/hdf/hdp-utilits.tar.gz -C /var/www/html/hdf/
+      command: tar -zxvf /var/www/html/hdf/hdp-utilits.tar.gz -C /var/www/html/
   when: install_hdf is defined and install_hdf
