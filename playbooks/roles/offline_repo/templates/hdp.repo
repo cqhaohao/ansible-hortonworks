@@ -1,9 +1,9 @@
 #VERSION_NUMBER={{ hdp_version }}
 [HDP-{{ hdp_version.split('-')[0] }}]
 name=HDP Version - HDP-{{ hdp_version }}
-baseurl={{ repo_base_url }}/hdp/HDP/centos{{ ansible_distribution_major_version }}/{{ hdp_version }}
+baseurl={{ repo_base_url }}/hdp/HDP/centos{{ ansible_distribution_major_version }}/{{ hdp_version }}-{{ hdp_build_number_repo }}
 gpgcheck=1
-gpgkey={{ repo_base_url }}/hdp/HDP/centos{{ ansible_distribution_major_version }}/{{ hdp_version }}/RPM-GPG-KEY/RPM-GPG-KEY-Jenkins
+gpgkey={{ repo_base_url }}/hdp/HDP/centos{{ ansible_distribution_major_version }}/{{ hdp_version }}-{{ hdp_build_number_repo }}/RPM-GPG-KEY/RPM-GPG-KEY-Jenkins
 enabled=1
 priority=1
 
