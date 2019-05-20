@@ -1,17 +1,17 @@
 #VERSION_NUMBER={{ hdp_version }}
 [HDP-{{ hdp_version.split('-')[0] }}]
 name=HDP Version - HDP-{{ hdp_version }}
-baseurl={{ repo_base_url }}/hdp/HDP/centos{{ ansible_distribution_major_version }}/{{ hdp_version }}-{{ hdp_build_number_repo }}
+baseurl={{ repo_base_url }}/HDP/centos{{ ansible_distribution_major_version }}/{{ hdp_version }}-{{ hdp_build_number_repo }}
 gpgcheck=1
-gpgkey={{ repo_base_url }}/hdp/HDP/centos{{ ansible_distribution_major_version }}/{{ hdp_version }}-{{ hdp_build_number_repo }}/RPM-GPG-KEY/RPM-GPG-KEY-Jenkins
+gpgkey={{ repo_base_url }}/HDP/centos{{ ansible_distribution_major_version }}/{{ hdp_version }}-{{ hdp_build_number_repo }}/RPM-GPG-KEY/RPM-GPG-KEY-Jenkins
 enabled=1
 priority=1
 
 
 [HDP-UTILS-{{ utils_version }}]
 name=HDP-UTILS Version - HDP-UTILS-{{ utils_version }}
-baseurl={{ repo_base_url }}/hdp/HDP-UTILS/centos{{ ansible_distribution_major_version }}/{{ utils_version }}
+baseurl={{ repo_base_url }}/HDP-UTILS/centos{{ ansible_distribution_major_version }}/{{ utils_version }}
 gpgcheck=1
-gpgkey={{ repo_base_url }}/hdp/HDP-UTILS/centos{{ ansible_distribution_major_version }}/{{ utils_version }}/RPM-GPG-KEY/RPM-GPG-KEY-Jenkins
+gpgkey={{ repo_base_url }}/HDP-UTILS/centos{{ ansible_distribution_major_version }}/{{ utils_version }}/RPM-GPG-KEY/RPM-GPG-KEY-Jenkins
 enabled=1
 priority=1
