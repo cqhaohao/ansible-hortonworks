@@ -152,6 +152,28 @@
         state: present
       notify: Restart {{ database }}
 
+    - name: Configure mysql character_set_server
+      ini_file:
+        path: "{{ (database == 'mariadb') | ternary(mariadb_config_file, mysql_config_file) }}"
+        create: no
+        section: "mysqld"
+        option: "character_set_server"
+        value: "utf8"
+        no_extra_spaces: yes
+        state: present
+      notify: Restart {{ database }}
+
+    - name: Configure mysql collation_server
+      ini_file:
+        path: "{{ (database == 'mariadb') | ternary(mariadb_config_file, mysql_config_file) }}"
+        create: no
+        section: "mysqld"
+        option: "collation_server"
+        value: "utf8_general_ci"
+        no_extra_spaces: yes
+        state: present
+      notify: Restart {{ database }}
+
     - name: Set mysql max_connections
       ini_file:
         path: "{{ (database == 'mariadb') | ternary(mariadb_config_file, mysql_config_file) }}"
