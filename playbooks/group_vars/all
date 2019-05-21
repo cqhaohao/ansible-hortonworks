@@ -191,13 +191,17 @@ blueprint_dynamic:                                              # properties for
       - HIVE_SERVER
       - HIVE_METASTORE
       - ACTIVITY_ANALYZER
+      - ACTIVITY_EXPLORER
+      - HST_SERVER
       - HST_AGENT
       - METRICS_MONITOR
       - RANGER_ADMIN
       - RANGER_USERSYNC
+      - RANGER_TAGSYNC
       - RANGER_KMS_SERVER
       - ATLAS_SERVER
       - KNOX_GATEWAY
+      - INFRA_SOLR
   - host_group: "hdp-masternode-02"
     clients: ['ZOOKEEPER_CLIENT', 'HDFS_CLIENT', 'YARN_CLIENT', 'MAPREDUCE2_CLIENT', 'TEZ_CLIENT',  'SQOOP', 'HIVE_CLIENT', 'OOZIE_CLIENT', 'INFRA_SOLR_CLIENT', 'SPARK2_CLIENT', 'HBASE_CLIENT', 'ATLAS_CLIENT']
     services:
@@ -209,12 +213,13 @@ blueprint_dynamic:                                              # properties for
       - HBASE_MASTER
       - HIVE_SERVER
       - HIVE_METASTORE
-      - ACTIVITY_ANALYZER
-      - HST_SERVER
       - HST_AGENT
       - METRICS_MONITOR
       - METRICS_COLLECTOR
       - METRICS_GRAFANA
+      - KNOX_GATEWAY
+      - RANGER_ADMIN
+      - RANGER_KMS_SERVER
       - INFRA_SOLR
       - APP_TIMELINE_SERVER
       - TIMELINE_READER
@@ -228,12 +233,11 @@ blueprint_dynamic:                                              # properties for
       - JOURNALNODE
       - OOZIE_SERVER
       - ZEPPELIN_MASTER
-      - ACTIVITY_ANALYZER
-      - ACTIVITY_EXPLORER
       - HST_AGENT
       - METRICS_MONITOR
+      - INFRA_SOLR
   - host_group: "hdp-slave"
-    clients: ['ZOOKEEPER_CLIENT', 'HDFS_CLIENT', 'YARN_CLIENT', 'MAPREDUCE2_CLIENT', 'TEZ_CLIENT',  'HIVE_CLIENT',  'INFRA_SOLR_CLIENT', 'SPARK2_CLIENT', 'HBASE_CLIENT', 'ATLAS_CLIENT']
+    clients: []
     services:
       - DATANODE
       - NODEMANAGER
