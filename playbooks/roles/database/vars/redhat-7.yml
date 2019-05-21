@@ -21,8 +21,11 @@ mysql_service_name: mysql
 mysql_config_file: /etc/my.cnf
 
 mariadb_version: 10.2
-mariadb_repo_url: "http://yum.mariadb.org/{{ mariadb_version }}/centos7-amd64"
-mariadb_repo_key: http://yum.mariadb.org/RPM-GPG-KEY-MariaDB
+#mariadb_repo_url: "http://yum.mariadb.org/{{ mariadb_version }}/centos7-amd64"
+#mariadb_repo_key: http://yum.mariadb.org/RPM-GPG-KEY-MariaDB
+#use ustc repo
+mariadb_repo_url: "https://mirrors.ustc.edu.cn/mariadb/yum/{{ mariadb_version }}/centos7-amd64/"
+mariadb_repo_key: https://mirrors.ustc.edu.cn/mariadb/yum/RPM-GPG-KEY-MariaDB
 mariadb_packages:
   - MariaDB-server
   - MySQL-python
