@@ -83,15 +83,15 @@ database_options:
 ## kerberos security configuration ##                     # useful if blueprint is dynamic, but can also be used to deploy the MIT KDC
 #####################################
 
-security: 'none'                                          # can be set to 'none', 'mit-kdc' or 'active-directory'
+security: 'mit-kdc'                                          # can be set to 'none', 'mit-kdc' or 'active-directory'
 security_options:
   external_hostname: ''                                   # if this is empty, Ansible will install and prepare the MIT KDC on the Ambari node
   realm: 'LTS.LOCAL'
   admin_principal: 'admin'                                # the Kerberos principal that has the permissions to create new users (don't append the realm)
   admin_password: "{{ default_password }}"
   kdc_master_key: "{{ default_password }}"                # only used when security is set to 'mit-kdc'
-  ldap_url: 'ldaps://ad.example.com:636'                  # only used when security is set to 'active-directory'
-  container_dn: 'OU=hadoop,DC=example,DC=com'             # only used when security is set to 'active-directory'
+  ldap_url: 'ldaps://lts-pplweb.lts.local:636'                  # only used when security is set to 'active-directory'
+  container_dn: 'OU=hadoop,DC=lts,DC=local'             # only used when security is set to 'active-directory'
   http_authentication: yes                                # set to yes to enable HTTP authentication (SPNEGO)
 
 
