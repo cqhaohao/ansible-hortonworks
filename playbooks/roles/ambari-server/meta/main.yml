@@ -1,5 +1,4 @@
 ---
-#change to user offline_repo
-#dependencies:
-#  - role: ambari-repo
-#    when: ambari_repo_enabled | default(True) | bool
+dependencies:
+  - role: ambari-repo
+    when: ambari_repo_enabled | default(True) | bool

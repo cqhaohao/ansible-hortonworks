@@ -19,7 +19,7 @@ hdpsearch_version: '4.0.0'                                # must be the full ver
 hdpsearch_build_number: '400'                             # the HDP Search build number from docs.hortonworks.com
 
 repo_base_url: 'http://hadoop1'     # change this if using a Local Repository
-
+ambari_repo_enabled: no                                    # if set to 'no', will use offline_repo, else use ambari_repo
 
 ###########################
 ## general configuration ##
