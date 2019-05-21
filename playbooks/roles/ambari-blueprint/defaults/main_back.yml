@@ -16,9 +16,8 @@ base_metrics_dir: "/var/lib"
 base_tmp_dir:     "/tmp"
 
 # Specific base data dirs
-hadoop_base_dir:        "/u/applic/hdfs/"
-hadoop_datanode_dir:        "/u1/applic/hdfs/"
-kafka_base_dir:         "/u/applic/hdfs/kafka-logs"
+hadoop_base_dir:        "/hadoop"
+kafka_base_dir:         "/kafka-logs"
 nifi_base_dir:          "/var/lib/nifi"
 nifi_registry_base_dir: "/var/lib/nifi-registry"
 
@@ -27,7 +26,7 @@ nifi_registry_base_dir: "/var/lib/nifi-registry"
 hdfs_dfs_namenode_checkpoint_dir: "{{ hadoop_base_dir }}/hdfs/namesecondary"
 hdfs_dfs_namenode_name_dir: "{{ hadoop_base_dir }}/hdfs/namenode"
 hdfs_dfs_journalnode_edits_dir: "{{ hadoop_base_dir }}/hdfs/journalnode"
-hdfs_dfs_datanode_data_dir: "{{ hadoop_datanode_dir }}/hdfs/data"
+hdfs_dfs_datanode_data_dir: "{{ hadoop_base_dir }}/hdfs/data"
 hdfs_log_dir_prefix: "{{ base_log_dir }}/hadoop"
 
 # Yarn dirs
