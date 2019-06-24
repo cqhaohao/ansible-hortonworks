@@ -16,8 +16,8 @@ base_metrics_dir: "/var/lib"
 base_tmp_dir:     "/tmp"
 
 # Specific base data dirs
-hadoop_base_dir:        "/u/applic/hdfs/"
-hadoop_datanode_dir:        "/u1/applic/hdfs/"
+hadoop_base_dir:        "/u/applic/hdfs"
+hadoop_datanode_dir:        "/u1/applic/hdfs"
 kafka_base_dir:         "/u/applic/hdfs/kafka-logs"
 nifi_base_dir:          "/var/lib/nifi"
 nifi_registry_base_dir: "/var/lib/nifi-registry"
