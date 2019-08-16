@@ -18,7 +18,7 @@ hdf_build_number: 'auto'                                  # the HDF build number
 hdpsearch_version: '4.0.0'                                # must be the full version number
 hdpsearch_build_number: '400'                             # the HDP Search build number from docs.hortonworks.com
 
-repo_base_url: 'http://hadoop1'     # change this if using a Local Repository
+repo_base_url: 'http://hdp01'     # change this if using a Local Repository
 ambari_repo_enabled: no                                    # if set to 'no', will use offline_repo, else use ambari_repo
 
 ###########################
@@ -83,7 +83,7 @@ database_options:
 ## kerberos security configuration ##                     # useful if blueprint is dynamic, but can also be used to deploy the MIT KDC
 #####################################
 
-security: 'mit-kdc'                                          # can be set to 'none', 'mit-kdc' or 'active-directory'
+security: 'none'                                          # can be set to 'none', 'mit-kdc' or 'active-directory'
 security_options:
   external_hostname: ''                                   # if this is empty, Ansible will install and prepare the MIT KDC on the Ambari node
   realm: 'LTS.LOCAL'
